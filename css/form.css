@@ -1,0 +1,73 @@
+section.form > form {
+	width         : 600px;
+	margin        : 20px auto;
+	padding       : 15px 50px;
+	border-radius : 5px;
+}
+
+section.form > form > input,
+section.form > form > select {
+	outline : none
+}
+
+section.form > form > label,
+section.form > form > fieldset > label,
+section.form > form > fieldset > span {
+	font-size : 1rem;
+}
+
+section.form > form > label {
+	display  : block;
+	position : relative;
+	margin   : 15px 0;
+}
+
+section.form > form > fieldset {
+	line-height : 25px;
+	border      : none;
+}
+
+section.form > form > fieldset * {
+	display : inline-block;
+}
+
+section.form > form > fieldset > span {
+	width : 50%;
+}
+
+section.form > form > fieldset > label {
+	padding : 5px;
+}
+
+section.form > form > fieldset > label > input {
+	line-height : 1.2rem;
+}
+
+section.form > form > fieldset > label > input[type="radio"] {
+	margin-top     : -1px;
+	vertical-align : middle;
+}
+
+section.form > form > label > input,
+section.form > form > label > select {
+	width    : 50%;
+	position : absolute;
+	right    : 25px;
+}
+
+section.form > form > button {
+	display          : block;
+	margin           : 35px auto 0;
+	padding          : 5px 10px;
+	background-color : var(--blue_dark);
+	color            : var(--black);
+	border           : none;
+	cursor           : pointer;
+	transition       : .2s ease-in;
+}
+
+section.form > form > button:hover {
+	background-color : var(--blue);
+
+
+}

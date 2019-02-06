@@ -1,0 +1,45 @@
+<style>
+    div#_cookie_use {
+        position         : fixed;
+        bottom           : 0;
+        display          : none;
+        width            : 100%;
+        padding          : 10px 5px;
+        font-size        : 1rem;
+        background-color : var(--red);
+        color            : var(--blue_dark);
+        z-index: 1;
+    }
+
+    div#_cookie_use > button#_close_alert_cookie {
+        position         : absolute;
+        right            : 15px;
+        top              : 15px;
+        padding          : 10px;
+        cursor           : pointer;
+        color            : var(--blue_dark);
+        background-color : transparent;
+        border           : none;
+    }
+
+    #_close_alert_cookie {
+    }
+</style>
+<div id="_cookie_use">
+    <p>En poursuivant votre navigation sur ce site, vous acceptez l’utilisation de cookies pour
+        vous proposer des conseils personnalisés et réaliser des statistiques pour nos service,
+        afin de répondre plus précisément à vos besoins.
+        <br/><a href="#">Pour en savoir plus et paramétrer les traceurs</a>
+    </p>
+    <button id="_close_alert_cookie">X</button>
+</div>
+<script>
+    /* globals _cookie_use, _close_alert_cookie */
+    if (!localStorage.cookie_use) {
+        _cookie_use.style.display = 'block';
+        _cookie_use.addEventListener('click', () => {
+            _cookie_use.style.display = 'none';
+            localStorage.cookie_use = 1;
+        });
+    }
+</script>

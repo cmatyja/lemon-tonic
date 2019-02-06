@@ -1,0 +1,62 @@
+section.form {
+	width            : 400px;
+	margin           : 250px auto 0;
+	text-align       : center;
+	background-image : linear-gradient(#F5F5F5, #DEDEDE);
+	box-shadow       : 5px 5px 20px rgba(20, 20, 20, .8);
+	animation        : .6s animation_opacity ease;
+}
+
+section.form > h1 {
+	margin-bottom    : 30px;
+	padding          : 10px 20px;
+	color            : #FFF;
+	background-color : var(--blue_dark);
+}
+
+section.form > form > input {
+	display : block;
+	margin  : 20px auto;
+	padding : 5px 10px;
+	border  : 1px solid var(--blue_dark);
+	outline : none;
+}
+
+section.form > form > button {
+	width            : 100%;
+	padding          : 10px 20px;
+	font-size        : 1.2rem;
+	line-height      : 1.2rem;
+	text-transform   : uppercase;
+	color            : #FFF;
+	background-color : var(--blue_dark);
+	border           : none;
+	transition       : .4s ease;
+	cursor           : pointer;
+}
+
+section.form > form > button:hover {
+	background-color : var(--blue_light);
+}
+
+div#_alert {
+	position         : fixed;
+	display          : none;
+	top              : 20px;
+	width            : 500px;
+	height           : 75px;
+	padding          : 0 20px;
+	line-height      : 75px;
+	background-color : #333;
+	color            : #FFF;
+}
+
+@keyframes animation_opacity {
+	0% {
+		transform : translateY(-100px);
+		opacity   : 0;
+	}
+	100% {
+		opacity : 100%;
+	}
+}

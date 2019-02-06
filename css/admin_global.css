@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+:root {
+	font-size    : 16px;
+	--blue_dark  : #114B5F;
+	--blue_light : #028090;
+	--blue       : #456990;
+	--red        : #F45B69;
+	--success    : #1E9B40;
+	--error      : #9B2B36;
+}
+
+* {
+	box-sizing  : border-box;
+	margin      : 0;
+	padding     : 0;
+	font-size   : 0;
+	font-family : Montserrat, sans-serif;
+}
+
+body {
+	background : linear-gradient(rgba(51, 51, 51, .75), rgba(51, 51, 51, .75)), url('../admin/img/fond.png') fixed;
+}
