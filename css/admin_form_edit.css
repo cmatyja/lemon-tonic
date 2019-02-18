@@ -1,0 +1,77 @@
+body {
+	background-color : var(--white);
+}
+
+form {
+	display          : block;
+	max-width        : 450px;
+	padding          : 20px;
+	margin           : auto;
+	border           : 1px solid var(--grey);
+	background-color : var(--green);
+	left             : 50%;
+	font-size        : 14px;
+	color            : #000;
+}
+
+form > input,
+form > select {
+	background-color : var(--white);
+	color            : #000;
+}
+
+form > input,
+form > label,
+form > select {
+	display     : block;
+	line-height : 200%;
+	padding     : 0 10px;
+	text-align  : left;
+}
+
+select {
+	max-width : 80%;
+}
+
+input:not([type="radio"]), select, button:not[data-type] {
+	border  : 1px solid var(--grey);
+	outline : none;
+	margin  : 10px auto;
+}
+
+input:not([type="radio"]) {
+	width      : 80%;
+	box-shadow : inset 0 0 0 300px var(--white);
+}
+
+select,
+input:not([type="radio"]) {
+	margin : 10px auto;
+}
+
+fieldset {
+	border     : none;
+	text-align : center;
+}
+
+label {
+	color : #FFF;
+}
+
+form > button {
+	display          : block;
+	margin           : auto;
+	padding          : 10px 20px;
+	font-size        : 1.2rem;
+	line-height      : 1.2rem;
+	text-transform   : uppercase;
+	color            : #FFF;
+	background-color : var(--pink);
+	border           : none;
+	transition       : .4s ease;
+	cursor           : pointer;
+}
+
+form > button:hover {
+	background-color : var(--grey);
+}

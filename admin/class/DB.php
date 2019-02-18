@@ -3,7 +3,7 @@
 class DB extends PDO
 {
     private const BD_TYPE = "mysql";
-    private const BD_NAME = "lemon-interactive";
+    private const BD_NAME = "lemon-tonic";
     private const BD_HOST = 'localhost';
     private const USER_NAME = 'root';
     private const USER_PASSWORD = 'root';
@@ -15,9 +15,8 @@ class DB extends PDO
             . ':dbname=' . self::BD_NAME
             . ';host=' . self::BD_HOST,
             self::USER_NAME,
-            self::USER_PASSWORD,[
-                PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES "utf8"',
-                PDO::ATTR_DEFAULT_FETCH_MODE=> PDO::FETCH_CLASS
+            self::USER_PASSWORD, [
+                PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES "utf8"'
             ]);
     }
 
@@ -25,6 +24,7 @@ class DB extends PDO
     {
         if (!self::$instance) {
             self::$instance = new DB;
+            self::$instance->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         }
         return self::$instance;
     }
@@ -38,8 +38,8 @@ class DB extends PDO
             }
             return $result;
         } catch (Exception $ex) {
-            mail('c.matyja@gmail.com'
-                , 'BUG SQL projet Lemon-Interactive'
+            mail('mail@admin.com'
+                , 'BUG SQL projet Lemon-Tonic'
                 , var_export($ex, true));
             return false;
         }
@@ -54,8 +54,8 @@ class DB extends PDO
             }
             return $result;
         } catch (Exception $ex) {
-            mail('c.matyja@gmail.com'
-                , 'BUG SQL projet Lemon-Interactive'
+            mail('mail@admin.com'
+                , 'BUG SQL projet Lemon-Tonic'
                 , var_export($ex, true));
             return false;
         }

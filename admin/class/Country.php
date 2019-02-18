@@ -4,12 +4,15 @@ class Country
 {
     private const TABLE_NAME = 'countries';
 
-    private $id;
+    private $country_id;
     private $name_FR;
+
+    static private $countries;
+    static private $ar_name_by_id;
 
     public function getId()
     {
-        return $this->id;
+        return $this->country_id;
     }
 
     public function getNameFR()
@@ -18,7 +21,7 @@ class Country
     }
 
 
-    static function AllCountries()
+    static function all()
     {
         $db = DB::link();
         $result = $db->query('SELECT * FROM ' . self::TABLE_NAME . ' ORDER BY name_FR');
@@ -27,5 +30,17 @@ class Country
             return [];
         }
         return $result->fetchAll(PDO::FETCH_ASSOC);
+    }
+
+    static public function get_name_by_id()
+    {
+        if (!self::$ar_name_by_id) {
+            self::$countries = self::all();
+
+            foreach (self::$countries as $country) {
+                self::$ar_name_by_id[$country['country_id']] = $country['name_FR'];
+            }
+        }
+        return self::$ar_name_by_id;
     }
 }

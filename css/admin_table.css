@@ -1,0 +1,99 @@
+.table {
+	display         : table;
+	width           : 100%;
+	max-width       : 1280px;
+	margin          : auto;
+	text-align      : center;
+	font-size       : 1rem;
+	border-collapse : collapse;
+}
+
+.table > * {
+	display        : table-row;
+	vertical-align : middle;
+	border         : 1px solid black;
+}
+
+.table > * > * {
+	display        : table-cell;
+	padding        : 5px;
+	margin         : auto;
+	vertical-align : middle;
+	border         : 1px solid black;
+}
+
+.table button[data-type="update"],
+.table button[data-type="delete"] {
+	width      : 100%;
+	height     : 35px;
+	margin     : 5px auto;
+	color      : #FFF;
+	border     : none;
+	cursor     : pointer;
+	transition : .2s ease-out;
+}
+
+.table button[data-type="update"] {
+	background-color : #5272CA;
+}
+
+.table button[data-type="update"]:hover {
+	background-color : #3A609C;
+}
+
+.table button[data-type="delete"] {
+	background-color : #CA3C2F;
+}
+
+.table button[data-type="delete"]:hover {
+	background-color : #852617;
+}
+
+#titles {
+	color            : var(--white);
+	background-color : var(--green);
+}
+
+#titles > h4 {
+	padding : 5px;
+}
+
+@media screen and (max-width : 1024px) {
+	.table > *, .table > * > * {
+		display : block;
+	}
+
+	.table > article[data-id] > * {
+		position     : relative;
+		margin       : -1px;
+		padding-left : 150px;
+	}
+
+	.table > article[data-id] > *::before {
+		content          : attr(data-name);
+		position         : absolute;
+		top              : 0;
+		left             : 0;
+		bottom           : 0;
+		width            : 130px;
+		padding          : 0 10px;
+		color            : var(--white);
+		background-color : var(--green);
+		line-height      : 2rem;
+		font-weight      : bold;
+	}
+
+	.table > article[data-id] {
+		margin-bottom : 1.4rem;
+	}
+
+	#titles {
+		display : none;
+	}
+
+	.table button[data-type="update"],
+	.table button[data-type="delete"] {
+		width  : 30%;
+		margin : 5px 20px;
+	}
+}

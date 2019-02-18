@@ -5,14 +5,15 @@
         <a href="#">Instagram</a>
         <a href="#">Pinterest</a>
     </nav>
-    <p>Disclamer : nous ne sommes pas des coachs sportifs, mais uniquement des passionés de musculation. Avec plus de 10
-        ans
-        d'expérience à notre actif, nous partageons nos conseils et astuces pour accélérer et sécuriser votre
-        progression
+    <p>
+        Nous sommes une entreprise artisanale depuis 1923, nous sommes spécialisés dans l'un des fruits les plus
+        efficaces pour notre santé : le citron.<br/>
+        Retrouvez nos desserts et boissons à base de ce merveilleux agrume, ainsi que des articles et recettes dans
+        notre blog.
     </p>
     <p>
         <strong>Adresse :</strong>
-        11 rue des Peupliers<br/>
+        11 rue des Développeurs<br/>
         59000 LILLE<br/>
         <br/>
         08 36 65 65 65 (Standard)<br/>
@@ -20,4 +21,11 @@
         03 20 15 15 15 (fax)<br/>
     </p>
 </footer>
+<script>
+    /* globals _btn_nav */
+    btn_nav.addEventListener('click', function () {
+        document.body.classList.toggle('nav_closed');
+        btn_nav.style.backgroundColor
+    })
+</script>
 <?php require_once 'alert_cookie.html';

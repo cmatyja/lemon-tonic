@@ -1,14 +1,15 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
 
 :root {
-	font-size    : 16px;
-	--black      : #50514F;
-	--blue_dark  : #2FB369;
-	--blue_light : #2FB369;
-	--blue       : #70C1B3;
-	--red        : #F45B69;
-	--success    : #1E9B40;
-	--error      : #9B2B36;
+	font-size          : 16px;
+	--top-title-header : 110px;
+	--black            : #50514F;
+	--green_dark       : #2FB369;
+	--green            : #70C1B3;
+	--white            : #FFF4BD;
+	--red              : #F45B69;
+	--success          : #1E9B40;
+	--error            : #9B2B36;
 }
 
 * {
@@ -25,26 +26,27 @@ body {
 	color            : var(--black);
 }
 
-body > header {
-	position   : relative;
-	height     : 400px;
-	background : linear-gradient(rgba(51, 51, 51, .3), rgba(51, 51, 51, .3)), url('../img/bg.jpg') fixed 0 -400px;
-	font-size  : 1rem;
+header {
+	position        : relative;
+	height          : 400px;
+	background      : linear-gradient(rgba(51, 51, 51, .3), rgba(51, 51, 51, .3)), url('../img/bg.jpg') fixed 0 0;
+	background-size : cover;
+	font-size       : 1rem;
 }
 
-body > header > h2, body > header > h1 {
+header > h1, header > h2 {
 	position : absolute;
 	left     : calc(100% / 5);
 }
 
-body > header > h2 {
-	top       : 110px;
+header > h1 {
+	top       : var(--top-title-header);
 	color     : #FFF;
 	font-size : 5rem;
 }
 
-body > header > h1 {
-	top       : calc(110px + 5rem + 20px);
+header > h2 {
+	top       : calc(var(--top-title-header) + 5rem + 20px);
 	color     : rgba(255, 255, 255, .5);
 	font-size : 2rem;
 }
@@ -55,42 +57,197 @@ body > nav {
 
 body > nav > a {
 	display          : inline-block;
-	width            : calc(100% / 5);
-	border           : 1px solid var(--blue_dark);
+	width            : calc(100% / 6);
+	border           : 1px solid var(--green_dark);
 	padding          : 15px 0;
 	color            : #FFF;
-	background-color : var(--blue);
+	background-color : var(--green);
 	font-size        : 1.5rem;
 	text-decoration  : none;
+	transition       : .3s ease;
+}
+
+body > nav > button {
+	display          : none;
+	position         : absolute;
+	right            : 25px;
+	top              : 5px;
+	width            : 40px;
+	height           : 40px;
+	padding          : 0;
+	border           : none;
+	border-radius    : 50%;
+	text-align       : center;
+	background-color : var(--green_dark);
+	color            : var(--white);
+	cursor           : pointer;
+	outline          : none;
+}
+
+body > nav > button::before,
+body > nav > button::after {
+	content          : '';
+	position         : absolute;
+	left             : 10px;
+	display          : block;
+	width            : 20px;
+	height           : 2px;
+	background-color : var(--white);
+	transition       : .4s ease;
+}
+
+body > nav > button::before {
+	top        : 20px;
+	transform  : rotate(45deg);
+	box-shadow : 0 9px 0 0 transparent;
+}
+
+body > nav > button::after {
+	bottom    : 18px;
+	transform : rotate(-45deg);
+}
+
+body.nav_closed > nav > button::before {
+	top        : 10px;
+	transform  : none;
+	box-shadow : 0 9px 0 0 var(--white);
+}
+
+body.nav_closed > nav > button::after {
+	bottom    : 10px;
+	transform : none;
 }
 
 body > nav > a:hover {
-	background-color : var(--blue_light);
+	background-color : var(--green_dark);
 }
 
 body > nav > a:first-letter {
 	text-transform : uppercase;
 }
 
-body > main {
-	background-color : #FFF4BD;
+main {
+	background-color : var(--white);
 	max-width        : 1280px;
 	margin           : auto;
 	padding          : 40px 0;
 }
 
-body > main > h1 {
+main h3 {
 	position   : relative;
 	font-size  : 3rem;
 	text-align : center;
 }
 
-body > main > h1::before {
+main h3::before {
 	content          : '';
 	position         : absolute;
 	bottom           : 0;
 	left             : 25%;
 	height           : 5px;
 	width            : 50%;
-	background-color : var(--blue_dark);
+	background-color : var(--green_dark);
+}
+
+body > footer {
+	width            : 100%;
+	margin-top       : 50px;
+	font-size        : 1rem;
+	background-color : var(--green_dark);
+	text-align       : center;
+	color            : #FFF;
+}
+
+body > footer > nav > a {
+	display         : block;
+	text-decoration : none;
+	font-weight     : bold;
+	color           : #FFF;
+}
+
+body > footer > p, body > footer > nav {
+	display        : inline-block;
+	margin         : auto;
+	width          : calc(80% / 3);
+	padding        : 20px 10px;
+	vertical-align : top;
+	font-size      : .8rem;
+}
+
+div#_alert {
+	position         : fixed;
+	display          : none;
+	top              : 20px;
+	width            : 500px;
+	padding          : 20px;
+	font-size        : 1rem;
+	background-color : #333;
+	color            : #FFF;
+}
+
+@media screen and  (max-width : 1024px) {
+
+}
+
+@media screen and (max-width : 640px) {
+	:root {
+		--top-title-header : 50px;
+	}
+
+	header {
+		height : 300px;
+	}
+
+	header > h1 {
+		font-size : 3rem;
+	}
+
+	header > h2 {
+		top       : calc(var(--top-title-header) + 1.5rem + 30px);
+		font-size : 1.5rem;
+	}
+
+	body > nav {
+		display          : block;
+		position         : fixed;
+		top              : 0;
+		left             : 0;
+		width            : 100vw;
+		transition       : .5s cubic-bezier(1, -0.93, 0, 1.31);
+		background-color : var(--black);
+		z-index          : 1;
+	}
+
+	body > nav > button {
+		display : inline-block;
+	}
+
+	body > nav > a {
+		display     : block;
+		width       : 85vw;
+		margin      : 0;
+		line-height : 45px;
+	}
+
+	body.nav_closed > nav {
+		left : -100vw;
+	}
+
+	body.nav_closed > nav > button {
+		right : -45px;
+	}
+
+	body.nav_closed > footer {
+		display : block;
+	}
+
+	body > footer > p, body > footer > nav {
+		display : block;
+		width   : 80%;
+	}
+}
+
+@media screen and (min-width : 641px)
+and (max-width : 1024px) {
+
 }

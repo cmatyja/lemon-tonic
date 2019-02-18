@@ -2,17 +2,9 @@
 
 class Email
 {
-    private const WEBMASTER_EMAIL = 'c.matyja@gmail.com';
-    private const SITE_TITLE = 'Projet Lemon-Interactive';
+    private const WEBMASTER_EMAIL = 'mail@admin.com';
+    private const SITE_TITLE = 'Projet Lemon-Tonic';
     private const HEADERS = 'MIME-Version: 1.0' . PHP_EOL . 'Content-type: text/html;charset=utf-8' . PHP_EOL;
-
-    static function message_server(): void
-    {
-
-        mail(self::WEBMASTER_EMAIL, self::SITE_TITLE
-            , '<pre>' . json_encode(['serveur' => $_SERVER], JSON_PRETTY_PRINT) . '</pre>'
-            , self::HEADERS);
-    }
 
     static function HTML_to_webmaster($message): void
     {

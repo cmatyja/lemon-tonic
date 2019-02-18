@@ -5,9 +5,11 @@ section.form > form {
 	border-radius : 5px;
 }
 
-section.form > form > input,
-section.form > form > select {
-	outline : none
+section.form > form > label > input,
+section.form > form > label > select {
+	color            : var(--white);
+	background-color : var(--black);
+	outline          : none
 }
 
 section.form > form > label,
@@ -58,16 +60,16 @@ section.form > form > label > select {
 section.form > form > button {
 	display          : block;
 	margin           : 35px auto 0;
-	padding          : 5px 10px;
-	background-color : var(--blue_dark);
-	color            : var(--black);
+	padding          : 10px 20px;
+	background-color : var(--green);
+	color            : var(--white);
+	font-size        : 1rem;
 	border           : none;
+	box-shadow       : 1px 1px 20px rgba(51, 51, 51, .3);
 	cursor           : pointer;
 	transition       : .2s ease-in;
 }
 
 section.form > form > button:hover {
-	background-color : var(--blue);
-
-
+	background-color : var(--green_dark);
 }

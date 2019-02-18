@@ -1,0 +1,50 @@
+main > section {
+	display        : table;
+	width          : 100%;
+	margin         : 0;
+	padding        : 20px;
+	text-align     : center;
+	font-size      : 1rem;
+	border-spacing : 20px;
+}
+
+main > section#_quick_link > a {
+	display         : table-cell;
+	width           : calc(100% / 3);
+	text-decoration : none;
+}
+
+main > section#_quick_link > a > img {
+	margin     : 10px 0;
+	transition : .4s ease;
+}
+
+main > section#_quick_link > a:hover > img {
+	opacity : .6;
+}
+
+main > section#_quick_link > a > h4 {
+	margin           : 0;
+	padding          : 5px;
+	color            : #FFF;
+	text-transform   : uppercase;
+	font-size        : 1.2rem;
+	background-color : var(--green);
+}
+
+main > section#_quick_link > a > p {
+	margin      : 0;
+	padding     : 0 10px;
+	font-size   : 1rem;
+	line-height : 1.4rem;
+	text-align  : center;
+	color       : var(--black);
+}
+
+@media screen and (max-width : 1024px) {
+	main > section#_quick_link > a {
+		display       : block;
+		width         : 100%;
+		margin-bottom : 20px;
+	}
+}

@@ -6,9 +6,10 @@
         width            : 100%;
         padding          : 10px 5px;
         font-size        : 1rem;
-        background-color : var(--red);
-        color            : var(--blue_dark);
-        z-index: 1;
+        background-color : var(--green_dark);
+        color            : var(--white);
+        border-top       : var(--black) solid 1px;
+        z-index          : 1;
     }
 
     div#_cookie_use > button#_close_alert_cookie {
@@ -17,12 +18,15 @@
         top              : 15px;
         padding          : 10px;
         cursor           : pointer;
-        color            : var(--blue_dark);
+        color            : var(--white);
         background-color : transparent;
+        font-weight      : bold;
         border           : none;
     }
 
-    #_close_alert_cookie {
+    div#_cookie_use > p > a {
+        color       : var(--white);
+        font-weight : bold;
     }
 </style>
 <div id="_cookie_use">
