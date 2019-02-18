@@ -1,5 +1,7 @@
 # Lemon-tonic
 
+Démo du projet accessible : [Partie front-office](http://lemon-tonic.cmatyja.yj.fr/ "Lemon-tonic") [Partie back-office](http://lemon-tonic.cmatyja.yj.fr/admin "Lemon-tonic admin")
+
 ## Projet réalisé en :
 
 - HTML5 / CSS3 
