@@ -3,7 +3,6 @@
 _Démo du projet accessible_ : 
 - [Partie front-office](http://lemon-tonic.cmatyja.yj.fr/ "Lemon-tonic") 
 - [Partie back-office](http://lemon-tonic.cmatyja.yj.fr/admin "Lemon-tonic admin")
-<a href="http://example.com/" target="_blank">Hello, world!</a>
 
 ## Projet réalisé en :
 
