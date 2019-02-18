@@ -11,7 +11,7 @@ _Démo du projet accessible_ :
 - PHP POO / PDO
 - MariaDB (requête SQL pour initialiser la base de données incluse dans le projet)
 
-Actuellement, le projet contient : 
+## Actuellement, le projet contient : 
 
 - Front-office
     * Une page d'accueil
@@ -20,7 +20,7 @@ Actuellement, le projet contient :
     * Système de connexion sécurisée
     * Gestion des utilisateurs
 
-Les logins utilisateurs sont :
+## Les logins utilisateurs sont :
  - Administrateur 
     * Login : cedric@gmail.com
     * Password : root
