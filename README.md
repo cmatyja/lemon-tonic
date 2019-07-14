@@ -29,6 +29,6 @@ _Démo du projet accessible_ :
     * Password : root
 
 ## TODO (éléments que j'envisage d'intégrer dans les prochaines semaines)
-- requete préparée
-- gestion des erreur class DB (ex : retourner une exception si pas résultat en particulier pour la méthode `exec()`) 
-- responsive table admin : ajouter les attributs data en JS (acutellement "en dur" dans le code HTML)
+[ ] requete préparée
+[ ] gestion des erreur class DB (ex : retourner une exception si pas résultat en particulier pour la méthode `exec()`) 
+[ ] responsive table admin : ajouter les attributs data en JS (acutellement "en dur" dans le code HTML)
